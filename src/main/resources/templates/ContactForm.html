@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Contact Form</title>
+</head>
+<body>
+<th:bolck th:insert="header.html"></th:bolck>
+	<div class="container-fluid">
+	<div class="card">
+	<div class="card-header bg-primary text-center text-white"><h5> Contact Form</h5></div>
+	<div class="card-body">
+	<form action="contact" method="post" >
+	<div class="row p-2">
+	<div class="col-4">To Email </div>
+	<div class="col-6"> <input type="email" name="toEmail" required="required"  class="form-control"></div>
+	</div>
+	<div class="row p-2">
+	<div class="col-4">Subject </div>
+	<div class="col-6"> <input type="text" name="subject" required="required"  class="form-control"></div>
+	</div>
+	
+	<div class="row p-2">
+	<div class="col-4">Message </div>
+	<div class="col-6"> 
+	<textarea name="message" rows="10" required="required"  class="form-control"></textarea>
+	
+	</div>
+	</div>
+	<div class="row p-2">
+	<div class="col-4"> </div>
+	<div class="col-6 "> <input type="submit" value="Send"  class="btn btn-success  "></div>
+	</div>
+	</form>
+	<div class="card-footer text-center bg-warning text-white">copyright@2024</div>
+	</div>
+	</div>
+		</div>
+</body>
+</html>

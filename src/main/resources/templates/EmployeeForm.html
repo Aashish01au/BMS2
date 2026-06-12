@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Form</title>
+</head>
+<body>
+<th:block th:insert="header.html"></th:block>
+	<div class="container-fluid">
+	<div class="card">
+	<div class="card-header bg-primary text-center text-white"><h5> Employee Form</h5></div>
+	<div class="card-body">
+	<form action="employee" method="post" >
+	<div class="row p-2">
+	<div class="col-4">First Name </div>
+	<div class="col-6"> <input type="text" name="fistname" required="required"  class="form-control"></div>
+	</div>
+	<div class="row p-2">
+	<div class="col-4">Last Name </div>
+	<div class="col-6"> <input type="text" name="lastName" required="required"  class="form-control"></div>
+	</div>
+	<div class="row p-2">
+	<div class="col-4">Gender  </div>
+	<div class="col-6">
+	 Male<input type="radio" name="gender"  value="male">
+	 Female <input type="radio" name="gender" value="female">
+	</div>
+	</div>
+	<div class="row p-2">
+	<div class="col-4">Email </div>
+	<div class="col-6"> <input type="email" name="email" required="required"  class="form-control"></div>
+	</div>
+	<div class="row p-2">
+	<div class="col-4">Password </div>
+	<div class="col-6"> <input type="password" name="password" required="required"  class="form-control"></div>
+	</div>
+	<div class="row p-2">
+	<div class="col-4">Phone</div>
+	<div class="col-6"> <input type="text" name="phone" required="required"  class="form-control"></div>
+	</div>
+	<div class="row p-2">
+	<div class="col-4">Age </div>
+	<div class="col-6"> <input type="number" name="age" required="required"  class="form-control"></div>
+	</div>
+	<div class="row p-2">
+	<div class="col-4">DOB </div>
+	<div class="col-6"> <input type="date" name="dob" required="required"  ></div>
+	</div>
+	<div class="row p-2">
+	<div class="col-4">Joining Date </div>
+	<div class="col-6"> <input type="date" name="joinDate" required="required" ></div>
+	</div>
+	<div class="row p-2">
+	<div class="col-4">Company Name </div>
+	<div class="col-6"> <input type="text" name="companyName" required="required"  class="form-control"></div>
+	</div>
+	<div class="row p-2">
+	<div class="col-4">Department </div>
+	<div class="col-6"> 
+	<select name="department" class="form-control">
+	<option>Select</option>
+	<option th:each="d:${dList}" value="${d.id}">[[${d.dept_name}]]</option>
+	</select>
+	 </div>
+	</div>
+	<div class="row p-2">
+	<div class="col-4">Post </div>
+	<div class="col-6"> <input type="text" name="post" required="required"  class="form-control"></div>
+	</div>
+	<div class="row p-2">
+	<div class="col-4">Salery </div>
+	<div class="col-6"> <input type="number" name="salery" required="required"  class="form-control"></div>
+	</div>
+	<div class="row p-2">
+	<div class="col-4">Projects </div>
+	<div class="col-6"> 
+	<input type="checkbox" name="projects" value="project_1" >Project-1
+	<input type="checkbox" name="projects" value="project_2" >Project-2
+	<input type="checkbox" name="projects" value="project_3" >Project-3
+	<input type="checkbox" name="projects" value="project_4" >Project-4
+	<input type="checkbox" name="projects" value="project_5" >Project-5
+	</div>
+	</div>
+	<div class="row p-2">
+	<div class="col-4">Country </div>
+	<div class="col-6"> <input type="text" name="address.country" required="required"  class="form-control"></div>
+	</div>
+	<div class="row p-2">
+	<div class="col-4">City</div>
+	<div class="col-6"> <input type="text" name="address.city" required="required"  class="form-control"></div>
+	</div>
+	<div class="row p-2">
+	<div class="col-4">State</div>
+	<div class="col-6"> 
+	<select name="address.state" class="form-control">
+	<option value="state-1">State-1</option>
+		<option value="state-2">State-2</option>
+			<option value="state-3">State-3</option>
+				<option value="state-4">State-4</option>
+					<option value="state-5">State-5</option>
+						<option value="state-6">State-6</option>
+							<option value="state-7">State-7</option>
+	</select>
+	</div>
+	</div>
+	<div class="row p-2">
+	<div class="col-4">Zipcode </div>
+	<div class="col-6"> <input type="text" name="address.Zipcode" required="required"  class="form-control"></div>
+	</div>
+	<div class="row p-2">
+	<div class="col-4"> </div>
+	<div class="col-6 "> <input type="submit" value="Save"  class="btn btn-success  "></div>
+	</div>
+	</form>
+	<div class="card-footer text-center bg-warning text-white">copyright@2024</div>
+	</div>
+	</div>
+		</div>
+</body>
+</html>

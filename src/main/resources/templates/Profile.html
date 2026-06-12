@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Personal Profile</title>
+</head>
+<body>
+<th:bolck th:insert="header.html"></th:bolck>
+	<div class="container-fluid">
+	<div class="card">
+	<div class="card-header bg-primary text-center text-white"><h5> Personal Profile</h5></div>
+	<div class="card-body">
+	<div class="row p-2">
+	<div class="col-4">First Name </div>
+	<div class="col-6">  [[${session.activeuser.firstName}]]</div>
+	</div>
+	<div class="row p-2">
+	<div class="col-4">Last Name </div>
+	<div class="col-6">  [[${session.activeuser.lastName}]]</div>
+	</div>
+	<div class="row p-2">
+	<div class="col-4">Email </div>
+	<div class="col-6"> [[${session.activeuser.email}]]</div>
+	</div>
+	<div class="card-footer text-center bg-warning text-white">copyright@2024</div>
+	</div>
+	</div>
+		</div>
+</body>
+</html>

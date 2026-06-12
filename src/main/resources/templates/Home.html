@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home Page</title>
+</head>
+<body>
+<th:block th:insert="header.html"></th:block>
+<h1>Welcome [[${session.activeuser.firstName}]] Sir</h1>
+</body>
+</html>

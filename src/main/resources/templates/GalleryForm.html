@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Gallery </title>
+</head>
+<body>
+<th:bolck th:insert="header.html"></th:bolck>
+	<div class="container-fluid">
+	<div class="card">
+	<div class="card-header bg-primary text-center text-white"><h5> Photo Gallery</h5></div>
+	<div class="card-body">
+	<span th:each="i:${imglist}">
+	<img alt="img" th:src="@{'/images/'+${i}}" width="360" height="360" class="p-2">
+	</span>
+	
+	</div>
+	<div class="card-footer text-center bg-warning text-white">copyright@2024</div>
+	</div>
+		</div>
+</body>
+</html>
